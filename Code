@@ -1,0 +1,25 @@
+nums = int(input())
+index = 0
+count = 0
+array = [0] * nums
+for i in range(nums):
+  array[i] = int(input())
+
+for i in range(nums):
+  if array[i] == 0:
+    count += 1
+
+newarray = [1] * (nums)
+
+for i in range(nums):
+    if array[i] == 0:
+      newarray[index] = 0
+      index += 1
+  
+for i in range(nums):
+  if array[i] != 0:
+    newarray[index] = array[i]
+    index += 1
+
+for i in range(nums):
+    print(newarray[i], end = " ")
